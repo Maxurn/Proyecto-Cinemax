@@ -19,10 +19,10 @@ import lombok.NoArgsConstructor;
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     
     @Column(nullable = false)
-    private int reservaId;
+    private Integer reservaId;
     
     @Column(unique = true, nullable = false)
     private String codigoQr;
