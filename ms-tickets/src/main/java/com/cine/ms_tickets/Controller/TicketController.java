@@ -21,12 +21,12 @@ public class TicketController {
     private TicketService service;
 
     @PostMapping("/generate")
-    public ResponseEntity<Ticket> generar(@RequestBody int reservaId) {
+    public ResponseEntity<Ticket> generar(@RequestBody Integer reservaId) {
         
         return ResponseEntity.status(HttpStatus.CREATED).body(service.generarTicket(reservaId));
     }
     
-    @GetMapping("/{Codigo}/validate")
+    @GetMapping("/{codigo}/validate")
     public ResponseEntity<?> validar(@PathVariable String codigo){
         Ticket ticket = service.validarTicket(codigo);
         if (ticket == null) {

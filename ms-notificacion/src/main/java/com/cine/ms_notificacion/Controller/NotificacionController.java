@@ -14,7 +14,6 @@ private final NotificacionService notificationService;
 
     @PostMapping("/enviar")
     public ResponseEntity<String> enviar(@RequestBody NotificacionRequest request) {
-        // Solo POST, tal como pediste
         return ResponseEntity.ok(notificationService.enviarNotificacion(request));
     }
 }

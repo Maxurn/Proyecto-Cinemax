@@ -10,7 +10,7 @@ public class TicketService {
     @Autowired
     private TicketRepository repository;
 
-    public Ticket generarTicket(int reservaId){
+    public Ticket generarTicket(Integer reservaId){
         Ticket ticket = new Ticket();
         ticket.setReservaId(reservaId);
         ticket.setCodigoQr("TKT-" +System.currentTimeMillis());
