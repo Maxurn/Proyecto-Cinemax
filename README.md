@@ -143,4 +143,4 @@ GET http://localhost:8089/api/v1/tickets/{codigo}/validate
 
 * **`ms-notificacion`**
 
-POST http://localhost:8089/api/v1/notifications/enviar -> **Envia notificacion al usuario con su entrada (correoDestino, funcionId, codigoTicket)** 
+POST http://localhost:8090/api/v1/notifications/enviar -> **Envia notificacion al usuario con su entrada (correoDestino, funcionId, codigoTicket)** 
