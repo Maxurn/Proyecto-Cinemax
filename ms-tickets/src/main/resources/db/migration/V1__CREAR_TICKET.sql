@@ -1,0 +1,6 @@
+CREATE TABLE tickets (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    reservaId INT NOT NULL,
+    codigoQr VARCHAR(255) UNIQUE NOT NULL,
+    estado VARCHAR(50) NOT NULL
+);

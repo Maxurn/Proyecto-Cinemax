@@ -1,0 +1,7 @@
+CREATE TABLE combo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL UNIQUE,
+    valor DECIMAL(10, 1) NOT NULL,
+    stock INT NOT NULL,
+    categoria VARCHAR(255)
+);
