@@ -20,6 +20,7 @@ El sistema resuelve de extremo a extremo la lógica de un complejo cinematográf
 A continuación se detalla la documentación para el correcto funcionamiento mediante **Postman**
 
 * **`ms-peliculas`**
+
 GET http://localhost:8081/api/v1/peliculas    
 
 GET http://localhost:8081/api/v1/peliculas/{id} -> **Mostrar Pelicula con el id Indicado**   
@@ -33,6 +34,7 @@ PUT http://localhost:8081/api/v1/peliculas/{id}
 DELETE http://localhost:8081/api/v1/peliculas/{id} 
 
 * **`ms-sucursal`** -> *Contiene el @ManyToOne & @OneToMany (Sala y Cine)*
+
 GET http://localhost:8082/api/v1/cines 
 
 GET http://localhost:8082/api/v1/cines/{id}
@@ -80,7 +82,9 @@ GET http://localhost:8084/api/v1/users/{id}
 PUT http://localhost:8084/api/v1/users/{id} -> **Crear usuario (nombre, segundoNombre, apellido, correo, telefono, rut)**
 
 DELETE http://localhost:8084/api/v1/users/{id}
+
 * **`ms-butacas`** 
+
 GET http://localhost:8085/api/v1/seats/show/{funcionId}?salaId={id} -> **Mostrar los asientos dependiento de la funcionId y salaId**
 
 PUT http://localhost:8085/api/v1/seats/{id}/lock -> **bloquear (tiempo limitado) un asiento segun su id**
@@ -116,6 +120,7 @@ POST http://localhost:8087/api/v1/pagos/pagar/combo -> **Crear un pago desde com
 GET http://localhost:8087/api/v1/pagos/combo/{id}
 
 * **`ms-confiteria`** 
+
 GET http://localhost:8088/api/v1/confiteria 
 
 GET http://localhost:8088/api/v1/confiteria/categoria/{categoria} -> **Listar dulces segun categoria**
