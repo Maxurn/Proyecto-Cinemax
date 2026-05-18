@@ -5,9 +5,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
-@FeignClient(name = "ms-butacas", url = "${ms-butacas.url}")
+@FeignClient(name = "ms-butacas", url = "http://localhost:8085/api/v1/seats")
 public interface ButacaClient {
 
-    @PutMapping("/api/v1/seats/{seatId}/book")
+    @PutMapping("/{seatId}/book")
     ButacaDTO reservarButaca(@PathVariable("seatId") Integer seatId);
 }

@@ -5,9 +5,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "ms-cartelera", url = "${ms-cartelera.url}")
+@FeignClient(name = "ms-cartelera", url = "http://localhost:8083/api/v1/funciones")
 public interface CarteleraClient {
 
-    @GetMapping("/api/v1/funciones/{id}")
+    @GetMapping("/{id}")
     FuncionDTO obtenerFuncion(@PathVariable("id") Integer id);
 }
