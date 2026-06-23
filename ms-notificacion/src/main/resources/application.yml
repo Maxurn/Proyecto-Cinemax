@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: ms-notificacion
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_cartelera?createDatabaseIfNotExist=true
+    username: root
+    password: root
+
+server:
+  port: 8090
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.cine.ms_notificacion: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

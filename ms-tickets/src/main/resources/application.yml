@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: ms-tickets
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_tickets?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 8089
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.cine.ms_tickets: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

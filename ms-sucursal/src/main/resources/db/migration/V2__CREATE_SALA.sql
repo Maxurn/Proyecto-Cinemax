@@ -1,0 +1,10 @@
+CREATE TABLE sala(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(100) NOT NULL,
+capacidad INT,
+cine_id INT NOT NULL,
+CONSTRAINT fk_cine_sala 
+    FOREIGN KEY (cine_id) 
+    REFERENCES cine(id) 
+    ON DELETE CASCADE
+);
