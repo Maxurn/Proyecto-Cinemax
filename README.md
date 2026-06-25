@@ -155,3 +155,25 @@ POST http://localhost:8090/api/v1/notifications/enviar -> **Envia notificacion a
 6. *INICIAR EL PROGRAMA DESCARGADO MEDIANTE **SPRING BOOT DASHBOARD**
 7. *ABRIR **POSTMAN** PARA COMPROBAR FUNCIONALIDADES*
 
+http://localhost:8081/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8082/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8083/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8084/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8085/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8086/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8087/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8088/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8089/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8090/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+
+http://localhost:8761/ **Comprobacion Eureka**
+
