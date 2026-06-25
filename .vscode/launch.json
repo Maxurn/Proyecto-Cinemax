@@ -1,0 +1,127 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MsButacasApplication<ms-butacas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_butacas.MsButacasApplication",
+            "projectName": "ms-butacas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsCarteleraApplication<ms-cartelera>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_cartelera.MsCarteleraApplication",
+            "projectName": "ms-cartelera",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsConfiteriaApplication<ms-confiteria>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_confiteria.MsConfiteriaApplication",
+            "projectName": "ms-confiteria",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsNotificacionApplication<ms-notificacion>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_notificacion.MsNotificacionApplication",
+            "projectName": "ms-notificacion",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsPagoApplication<ms-pago>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_pago.MsPagoApplication",
+            "projectName": "ms-pago",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62700 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-pago"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsPeliculasApplication<ms-peliculas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_peliculas.MsPeliculasApplication",
+            "projectName": "ms-peliculas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62723 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-peliculas"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsReservaApplication<ms-reserva>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_reserva.MsReservaApplication",
+            "projectName": "ms-reserva",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsSucursalApplication<ms-sucursal>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_sucursal.MsSucursalApplication",
+            "projectName": "ms-sucursal",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62746 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-sucursal"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsTicketsApplication<ms-tickets>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_tickets.MsTicketsApplication",
+            "projectName": "ms-tickets",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsUsuarioApplication<ms-usuario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.ms_usuario.MsUsuarioApplication",
+            "projectName": "ms-usuario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.eureka_server.EurekaServerApplication",
+            "projectName": "eureka-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cine.api_gateway.ApiGatewayApplication",
+            "projectName": "api-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

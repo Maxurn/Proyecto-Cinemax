@@ -1,0 +1,143 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+          routes:
+            - id: ms-peliculas
+              uri: lb://MS-PELICULAS
+              predicates:
+                - Path=/api/v1/peliculas,/api/v1/peliculas/**
+
+            - id: ms-sucursal
+              uri: lb://MS-SUCURSAL
+              predicates:
+                - Path=/api/v1/cines,/api/v1/cines/**,/api/v1/salas,/api/v1/salas/**
+
+            - id: ms-cartelera
+              uri: lb://MS-CARTELERA
+              predicates:
+                - Path=/api/v1/funciones,/api/v1/funciones/**
+
+            - id: ms-usuario
+              uri: lb://MS-USUARIO
+              predicates:
+                - Path=/api/v1/users,/api/v1/users/**
+
+            - id: ms-butacas
+              uri: lb://MS-BUTACAS
+              predicates:
+                - Path=/api/v1/seats,/api/v1/seats/**
+
+            - id: ms-reserva
+              uri: lb://MS-RESERVA
+              predicates:
+                - Path=/api/v1/bookings,/api/v1/bookings/**
+
+            - id: ms-pago
+              uri: lb://MS-PAGO
+              predicates:
+                - Path=/api/v1/pagos,/api/v1/pagos/**
+
+            - id: ms-confiteria
+              uri: lb://MS-CONFITERIA
+              predicates:
+                - Path=/api/v1/confiteria,/api/v1/confiteria/**
+
+            - id: ms-tickets
+              uri: lb://MS-TICKETS
+              predicates:
+                - Path=/api/v1/tickets,/api/v1/tickets/**
+
+            - id: ms-notificacion
+              uri: lb://MS-NOTIFICACION
+              predicates:
+                - Path=/api/v1/notifications,/api/v1/notifications/**
+
+            ##SWAGGER URI
+
+            - id: api-docs-peliculas
+              uri: lb://MS-PELICULAS
+              predicates:
+                - Path=/api-docs/peliculas
+              filters:
+                - RewritePath=/api-docs/peliculas, /v3/api-docs
+
+            - id: api-docs-sucursal
+              uri: lb://MS-SUCURSAL
+              predicates:
+                - Path=/api-docs/sucursal
+              filters:
+                - RewritePath=/api-docs/sucursal, /v3/api-docs
+
+            - id: api-docs-cartelera
+              uri: lb://MS-CARTELERA
+              predicates:
+                - Path=/api-docs/cartelera
+              filters:
+                - RewritePath=/api-docs/cartelera, /v3/api-docs
+
+            - id: api-docs-usuario
+              uri: lb://MS-USUARIO
+              predicates:
+                - Path=/api-docs/usuario
+              filters:
+                - RewritePath=/api-docs/usuario, /v3/api-docs
+
+            - id: api-docs-butacas
+              uri: lb://MS-BUTACAS
+              predicates:
+                - Path=/api-docs/butacas
+              filters:
+                - RewritePath=/api-docs/butacas, /v3/api-docs
+
+            - id: api-docs-reserva
+              uri: lb://MS-RESERVA
+              predicates:
+                - Path=/api-docs/reserva
+              filters:
+                - RewritePath=/api-docs/reserva, /v3/api-docs
+
+            - id: api-docs-pago
+              uri: lb://MS-PAGO
+              predicates:
+                - Path=/api-docs/pago
+              filters:
+                - RewritePath=/api-docs/pago, /v3/api-docs
+
+            - id: api-docs-confiteria
+              uri: lb://MS-CONFITERIA
+              predicates:
+                - Path=/api-docs/confiteria
+              filters:
+                - RewritePath=/api-docs/confiteria, /v3/api-docs
+
+            - id: api-docs-tickets
+              uri: lb://MS-TICKETS
+              predicates:
+                - Path=/api-docs/tickets
+              filters:
+                - RewritePath=/api-docs/tickets, /v3/api-docs
+
+            - id: api-docs-notificacion
+              uri: lb://MS-NOTIFICACION
+              predicates:
+                - Path=/api-docs/notificacion
+              filters:
+                - RewritePath=/api-docs/notificacion, /v3/api-docs
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+
+springdoc:
+  swagger-ui:
+    enabled: true
