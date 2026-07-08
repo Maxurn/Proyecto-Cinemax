@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cine.ms_cartelera.Model.DTO.PeliculaDTO;
 
-@FeignClient(name = "ms-peliculas", url = "http://localhost:8081/api/v1/peliculas")
+@FeignClient(name = "ms-peliculas")
 public interface PeliculaClient {
 
     @GetMapping("/{id}")
