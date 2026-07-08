@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.cine.ms_confiteria.Model.DTO.ComboPagoDTO;
 import com.cine.ms_confiteria.Model.DTO.PagoDTO;
 
-@FeignClient(name = "ms-pago", url = "http://localhost:8087/api/v1/pagos")
+@FeignClient(name = "ms-pago")
 public interface PagoClient {
 
     @PostMapping("/pagar/combo")
