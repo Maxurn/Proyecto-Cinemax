@@ -183,6 +183,7 @@ http://localhost:8761/
 6. *INICIAR EL PROGRAMA DESCARGADO MEDIANTE **SPRING BOOT DASHBOARD**, PARA LOGRAR INICIAR TODOS JUNTOS.*
 7. *ABRIR **POSTMAN** o **SWAGGER UI** PARA COMPROBAR FUNCIONALIDADES.*
 
+<<<<<<< HEAD
 
 * **`UTILIZACION DEL HATEOAS`**
 
@@ -190,3 +191,5 @@ Presente en el microservicio peliculas
 
 1. Entrar a Postman/SwaggerUI
 2. Ingresar un endpoint disponible (Ej. GET http://localhost:8080/api/v1/peliculas)
+=======
+>>>>>>> 5f5cac944fc00382ac41623d59aade42b906c57a
