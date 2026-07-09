@@ -15,7 +15,7 @@ spring:
             - id: ms-peliculas
               uri: lb://MS-PELICULAS
               predicates:
-                - Path=/api/v1/peliculas,/api/v1/peliculas/**
+                - Path=/api/v1/peliculas,/api/v1/peliculas/**,/api/v2/peliculas,/api/v2/peliculas/**
 
             - id: ms-sucursal
               uri: lb://MS-SUCURSAL

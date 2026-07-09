@@ -21,7 +21,7 @@ El sistema resuelve de extremo a extremo la lógica de un complejo cinematográf
 
 A continuación se detalla la documentación para el correcto funcionamiento mediante **Postman**, se utilizo **API Gateway** para redirigir a todos los endpoints a uno solo: *localhost:8080*
 
-* **`ms-peliculas`** 8081
+* **`ms-peliculas`** 8081 (V1 Y V2)
 
 GET http://localhost:8080/api/v1/peliculas    
 
@@ -34,6 +34,20 @@ POST http://localhost:8080/api/v1/peliculas/guardar
 PUT http://localhost:8080/api/v1/peliculas/{id}       
 
 DELETE http://localhost:8080/api/v1/peliculas/{id} 
+
+* *Demostracion de HATEOAS PeliculaControllerV2*
+
+GET http://localhost:8080/api/v2/peliculas  
+
+GET http://localhost:8080/api/v2/peliculas/{id}
+
+GET http://localhost:8080/api/v2/peliculas/filtraRating/{Rating}
+
+POST http://localhost:8080/api/v2/peliculas/guardar
+
+PUT http://localhost:8080/api/v2/peliculas/{id}      
+
+DELETE http://localhost:8080/api/v2/peliculas/{id}
 
 * **`ms-sucursal`** 8082 -> *Contiene el @ManyToOne & @OneToMany (Sala y Cine)*
 
@@ -149,25 +163,25 @@ POST http://localhost:8080/api/v1/notifications/enviar -> **Envia notificacion a
 
 * **`Endpoints de ingreso a Swagger OpenAPI`**
 
-http://localhost:8081/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8081/doc/swagger-ui/index.html#
 
-http://localhost:8082/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8082/doc/swagger-ui/index.html#
 
-http://localhost:8083/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8083/doc/swagger-ui/index.html#
 
-http://localhost:8084/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8084/doc/swagger-ui/index.html#
 
-http://localhost:8085/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8085/doc/swagger-ui/index.html#
 
-http://localhost:8086/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8086/doc/swagger-ui/index.html#
 
-http://localhost:8087/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8087/doc/swagger-ui/index.html#
 
-http://localhost:8088/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8088/doc/swagger-ui/index.html#
 
-http://localhost:8089/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8089/doc/swagger-ui/index.html#
 
-http://localhost:8090/doc/swagger-ui/index.html#/Usuarios/obtenerPorId
+http://localhost:8090/doc/swagger-ui/index.html#
 
 * **`Comprobacion Eureka`**
 
@@ -183,13 +197,10 @@ http://localhost:8761/
 6. *INICIAR EL PROGRAMA DESCARGADO MEDIANTE **SPRING BOOT DASHBOARD**, PARA LOGRAR INICIAR TODOS JUNTOS.*
 7. *ABRIR **POSTMAN** o **SWAGGER UI** PARA COMPROBAR FUNCIONALIDADES.*
 
-<<<<<<< HEAD
-
 * **`UTILIZACION DEL HATEOAS`**
 
-Presente en el microservicio peliculas
+* Presente en el microservicio peliculas (*MS-PELICULAS*)
+-> INGRESAR A PELICULA(ID), LISTAR TODAS LAS PELICULAS, LISTAR TODAS LAS PELICULAS CON EL MISMO RATING
 
 1. Entrar a Postman/SwaggerUI
 2. Ingresar un endpoint disponible (Ej. GET http://localhost:8080/api/v1/peliculas)
-=======
->>>>>>> 5f5cac944fc00382ac41623d59aade42b906c57a
