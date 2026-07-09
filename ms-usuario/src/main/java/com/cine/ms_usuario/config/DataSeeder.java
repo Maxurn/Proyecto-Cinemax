@@ -18,7 +18,7 @@ public class DataSeeder {
     public CommandLineRunner seedUsuarios(UsuarioRepository repository) {
         return args -> {
             if (repository.count() > 0) {
-                log.info("Usuarios ya existen, se omite el seeding.");
+                log.info("Ya existen usuarios en la BB.DD.");
                 return;
             }
             Faker faker = new Faker();
@@ -31,7 +31,7 @@ public class DataSeeder {
                 usuario.setRut(faker.number().digits(8));
                 repository.save(usuario);
             }
-            log.info("Se generaron 10 usuarios de prueba con Datafaker.");
+            log.info("Se generaron 10 usuarios de prueba!");
         };
     }
 }
